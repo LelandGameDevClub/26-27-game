@@ -1,0 +1,74 @@
+# ==========================================
+# Unity Generated / Cache Folders
+# ==========================================
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# ==========================================
+# Asset Store & Package Management
+# ==========================================
+# Ignore downloaded Asset Store packages
+AssetStoreTools*
+
+# Ignore package cache, but keep package manifests intact
+/[Pp]ackages/*
+!/[Pp]ackages/manifest.json
+!/[Pp]ackages/packages-lock.json
+
+# ==========================================
+# Gradle / Android Builds (if targeting mobile)
+# ==========================================
+.gradle/
+/[Aa]ssets/[Pp]lugins/Android/assets/
+
+# ==========================================
+# IDE & Code Editor Files
+# ==========================================
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity profiler & crash reports
+sysinfo.txt
+*.stackdump
+
+# ==========================================
+# OS Generated Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# ==========================================
+# Critical Rule for Unity
+# ==========================================
+# Never ignore .meta files, even if generated automatically
+!*.meta
