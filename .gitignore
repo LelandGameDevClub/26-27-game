@@ -1,36 +1,34 @@
 # ==========================================
-# Unity Generated / Cache Folders
+# Unity Generated / Cache Folders (in /game)
 # ==========================================
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Mm]emoryCaptures/
+/game/[Ll]ibrary/
+/game/[Tt]emp/
+/game/[Oo]bj/
+/game/[Bb]uild/
+/game/[Bb]uilds/
+/game/[Ll]ogs/
+/game/[Uu]ser[Ss]ettings/
+/game/[Mm]emoryCaptures/
 
 # ==========================================
 # Asset Store & Package Management
 # ==========================================
-# Ignore downloaded Asset Store packages
-AssetStoreTools*
+/game/AssetStoreTools*
 
-# Ignore package cache, but keep package manifests intact
-/[Pp]ackages/*
-!/[Pp]ackages/manifest.json
-!/[Pp]ackages/packages-lock.json
+# Ignore package cache, keep manifests
+/game/[Pp]ackages/*
+!/game/[Pp]ackages/manifest.json
+!/game/[Pp]ackages/packages-lock.json
 
 # ==========================================
-# Gradle / Android Builds (if targeting mobile)
+# Gradle / Android Builds
 # ==========================================
 .gradle/
-/[Aa]ssets/[Pp]lugins/Android/assets/
+/game/[Aa]ssets/[Pp]lugins/Android/assets/
 
 # ==========================================
 # IDE & Code Editor Files
 # ==========================================
-# Visual Studio / Rider / VS Code
 .vs/
 .idea/
 .vscode/
@@ -70,5 +68,4 @@ ehthumbs.db
 # ==========================================
 # Critical Rule for Unity
 # ==========================================
-# Never ignore .meta files, even if generated automatically
 !*.meta
