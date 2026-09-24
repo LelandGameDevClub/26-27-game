@@ -1,0 +1,79 @@
+# ==========================================
+# Line endings
+# ==========================================
+* text=auto
+
+# ==========================================
+# Unity YAML — enables Unity's Smart Merge (UnityYAMLMerge)
+# Without this, two people editing the same scene or prefab
+# produces a conflict that cannot be resolved by hand.
+# See CONTRIBUTING.md for the one-time setup command.
+# ==========================================
+*.unity           merge=unityyamlmerge eol=lf
+*.prefab          merge=unityyamlmerge eol=lf
+*.asset           merge=unityyamlmerge eol=lf
+*.mat             merge=unityyamlmerge eol=lf
+*.anim            merge=unityyamlmerge eol=lf
+*.controller      merge=unityyamlmerge eol=lf
+*.overrideController merge=unityyamlmerge eol=lf
+*.physicMaterial  merge=unityyamlmerge eol=lf
+*.physicsMaterial2D merge=unityyamlmerge eol=lf
+*.meta            merge=unityyamlmerge eol=lf
+*.playable        merge=unityyamlmerge eol=lf
+*.mask            merge=unityyamlmerge eol=lf
+*.terrainlayer    merge=unityyamlmerge eol=lf
+*.signal          merge=unityyamlmerge eol=lf
+*.scenetemplate   merge=unityyamlmerge eol=lf
+
+# Source
+*.cs              text diff=csharp eol=lf
+*.shader          text eol=lf
+*.hlsl            text eol=lf
+*.cginc           text eol=lf
+*.json            text eol=lf
+*.md              text eol=lf
+*.inputactions    text eol=lf
+*.asmdef          text eol=lf
+
+# ==========================================
+# Git LFS — binary art and audio.
+# These files are large and change often; without LFS the repo
+# balloons and clones get slow for everyone. Run `git lfs install`
+# once before your first commit (see CONTRIBUTING.md).
+# ==========================================
+# Art
+*.png    filter=lfs diff=lfs merge=lfs -text
+*.jpg    filter=lfs diff=lfs merge=lfs -text
+*.jpeg   filter=lfs diff=lfs merge=lfs -text
+*.gif    filter=lfs diff=lfs merge=lfs -text
+*.psd    filter=lfs diff=lfs merge=lfs -text
+*.psb    filter=lfs diff=lfs merge=lfs -text
+*.ase    filter=lfs diff=lfs merge=lfs -text
+*.aseprite filter=lfs diff=lfs merge=lfs -text
+*.tga    filter=lfs diff=lfs merge=lfs -text
+*.tif    filter=lfs diff=lfs merge=lfs -text
+*.tiff   filter=lfs diff=lfs merge=lfs -text
+*.exr    filter=lfs diff=lfs merge=lfs -text
+
+# Audio
+*.wav    filter=lfs diff=lfs merge=lfs -text
+*.mp3    filter=lfs diff=lfs merge=lfs -text
+*.ogg    filter=lfs diff=lfs merge=lfs -text
+*.aif    filter=lfs diff=lfs merge=lfs -text
+*.aiff   filter=lfs diff=lfs merge=lfs -text
+*.flp    filter=lfs diff=lfs merge=lfs -text
+
+# Video
+*.mp4    filter=lfs diff=lfs merge=lfs -text
+*.mov    filter=lfs diff=lfs merge=lfs -text
+*.webm   filter=lfs diff=lfs merge=lfs -text
+
+# Fonts / models / misc binaries
+*.ttf    filter=lfs diff=lfs merge=lfs -text
+*.otf    filter=lfs diff=lfs merge=lfs -text
+*.fbx    filter=lfs diff=lfs merge=lfs -text
+*.blend  filter=lfs diff=lfs merge=lfs -text
+*.dll    filter=lfs diff=lfs merge=lfs -text
+*.so     filter=lfs diff=lfs merge=lfs -text
+*.bundle filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
