@@ -1,30 +1,30 @@
 # ==========================================
 # Unity Generated / Cache Folders (in /game)
 # ==========================================
-/game/[Ll]ibrary/
-/game/[Tt]emp/
-/game/[Oo]bj/
-/game/[Bb]uild/
-/game/[Bb]uilds/
-/game/[Ll]ogs/
-/game/[Uu]ser[Ss]ettings/
-/game/[Mm]emoryCaptures/
+/Game/[Ll]ibrary/
+/Game/[Tt]emp/
+/Game/[Oo]bj/
+/Game/[Bb]uild/
+/Game/[Bb]uilds/
+/Game/[Ll]ogs/
+/Game/[Uu]ser[Ss]ettings/
+/Game/[Mm]emoryCaptures/
 
 # ==========================================
 # Asset Store & Package Management
 # ==========================================
-/game/AssetStoreTools*
+/Game/AssetStoreTools*
 
 # Ignore package cache, keep manifests
-/game/[Pp]ackages/*
-!/game/[Pp]ackages/manifest.json
-!/game/[Pp]ackages/packages-lock.json
+/Game/[Pp]ackages/*
+!/Game/[Pp]ackages/manifest.json
+!/Game/[Pp]ackages/packages-lock.json
 
 # ==========================================
 # Gradle / Android Builds
 # ==========================================
 .gradle/
-/game/[Aa]ssets/[Pp]lugins/Android/assets/
+/Game/[Aa]ssets/[Pp]lugins/Android/assets/
 
 # ==========================================
 # IDE & Code Editor Files
@@ -69,3 +69,18 @@ ehthumbs.db
 # Critical Rule for Unity
 # ==========================================
 !*.meta
+# ==========================================
+# Unity build outputs & recorder output
+# ==========================================
+/Game/[Rr]ecordings/
+/Game/[Bb]uild[Ss]ettings/
+/[Bb]uilds/
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# ==========================================
+# Rider / JetBrains per-user files
+# ==========================================
+/Game/.idea/
