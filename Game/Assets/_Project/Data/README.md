@@ -1,1 +1,1 @@
-ScriptableObjects and data files — dialogue assets, item definitions, level configs.
+ScriptableObjects and data files — dialogue assets, item definitions, level configs, character data.
