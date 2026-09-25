@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class CharacterBase : MonoBehaviour
 {
-    private Dictionary<string, int> stats =
+    private Dictionary<string, int> stats = new()
     {
         {"Athletics", 0},
         {"Will", 0},
