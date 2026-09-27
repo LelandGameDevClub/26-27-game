@@ -3,24 +3,16 @@ using System.IO;
 
 public class CharacterManager : MonoBehaviour
 {
-    public string characterPath;
-    public CharacterBase character;
+    private string characterPath = "_Project/Data/Characters/";
+    public string characterName;
+    public CharacterBase characterPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        CharacterData data = DataSerializer.LoadJson<CharacterData>(characterPath);
+        CharacterBase character = Instantiate(characterPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        CharacterData data = DataSerializer.LoadJson<CharacterData>(characterPath+characterName+".json");
         character.stats = data.stats;
-    }
-    private string LoadFile(string fileLocation)
-    {
-        byte[] buffer;
-        using (FileStream fs = File.OpenRead(fileLocation))
-        {
-            buffer = new byte[fs.Length];
-            fs.Read(buffer, 0, (int)fs.Length);
-        }
-        return System.Text.Encoding.UTF8.GetString(buffer);
     }
 
     // Update is called once per frame

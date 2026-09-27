@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ed00630dc1f1e41bfd0c5924494853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterManager
-  characterPath: _Project/Data/character_1.json
+  characterName: character_1
   character: {fileID: 2118303440}
 --- !u!1001 &2118303439
 PrefabInstance:
