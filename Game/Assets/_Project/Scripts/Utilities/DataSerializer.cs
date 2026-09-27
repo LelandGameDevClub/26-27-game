@@ -5,7 +5,7 @@ public static class DataSerializer
 {
     public static T LoadJson<T>(string relativePath)
     {
-        string fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
+        string fullPath = Path.Combine(Application.dataPath, relativePath);
 
         if (!File.Exists(fullPath))
         {

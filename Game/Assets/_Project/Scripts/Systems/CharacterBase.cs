@@ -3,13 +3,7 @@ using System.Collections.Generic;
 
 public class CharacterBase : MonoBehaviour
 {
-    private Dictionary<string, int> stats = new()
-    {
-        {"Athletics", 0},
-        {"Will", 0},
-        {"Intellect", 0},
-        {"Charisma", 0}
-    };
+    public List<int> stats = new() {0, 0, 0, 0};
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
