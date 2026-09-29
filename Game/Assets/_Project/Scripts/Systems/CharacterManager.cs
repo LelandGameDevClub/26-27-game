@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.IO;
 
 public class CharacterManager : MonoBehaviour
 {
-    private string characterPath = "_Project/Data/Characters/";
+    private string characterPath = "Characters/";
     public string characterName;
     public CharacterBase characterPrefab;
 
@@ -11,7 +10,7 @@ public class CharacterManager : MonoBehaviour
     void Start()
     {
         CharacterBase character = Instantiate(characterPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        CharacterData data = DataSerializer.LoadJson<CharacterData>(characterPath+characterName+".json");
+        CharacterData data = DataSerializer.LoadJson<CharacterData>(characterPath + characterName);
         character.stats = data.stats;
     }
 

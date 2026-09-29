@@ -1,19 +1,20 @@
-using System.IO;
 using UnityEngine;
 
 public static class DataSerializer
 {
-    public static T LoadJson<T>(string relativePath)
+    // Loads through Resources rather than reading the file directly, because
+    // Application.dataPath only exists in the editor -- a built game has no Assets folder.
+    // resourcePath is relative to any Resources folder, with no extension: "Characters/character_1"
+    public static T LoadJson<T>(string resourcePath)
     {
-        string fullPath = Path.Combine(Application.dataPath, relativePath);
+        TextAsset asset = Resources.Load<TextAsset>(resourcePath);
 
-        if (!File.Exists(fullPath))
+        if (asset == null)
         {
-            Debug.LogError($"Path does not exist: {fullPath}");
+            Debug.LogError($"No JSON asset found at Resources path: {resourcePath}");
             return default;
         }
 
-        string json = File.ReadAllText(fullPath);
-        return JsonUtility.FromJson<T>(json);
+        return JsonUtility.FromJson<T>(asset.text);
     }
 }
