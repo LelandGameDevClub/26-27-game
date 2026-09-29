@@ -1,10 +1,25 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class InputManager : ScriptableObject
+public class InputManager : MonoBehaviour
 {
     public PlayerBase player;
 
+    private InputSystem_Actions inputActions;
+
+    void Awake()
+    {
+        inputActions = new InputSystem_Actions();
+    }
+
+    void OnEnable()
+    {
+        inputActions.Player.Enable(); 
+    }
+
+    void OnDisable()
+    {
+        inputActions.Player.Disable();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,13 +31,10 @@ public class InputManager : ScriptableObject
     void Update()
     {
         if (player) {
-            float x_input = Input.GetAxis("Horizontal");
-            float y_input = Input.GetAxis("Vertical");
-
-            Vector2 movement_vector = new Vector2(x_input, y_input);
-            movement_vector = movement_vector.normalized * player.speed;
+            Vector2 movement_vector = inputActions.Player.Move.ReadValue<Vector2>();
+            movement_vector = movement_vector.normalized * player.speed * 1.5f;
             
-            player.GetComponent<Rigidbody>().linearVelocity = movement_vector;
+            player.GetComponent<Rigidbody2D>().linearVelocity = movement_vector;
         }
     }
 }
