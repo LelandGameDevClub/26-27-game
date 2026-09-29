@@ -3,6 +3,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public PlayerBase player;
+    public bool isSprinting = false;
 
     private InputSystem_Actions inputActions;
 
@@ -31,8 +32,12 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         if (player) {
+            isSprinting = inputActions.Player.Sprint.IsPressed();
+
+            float speed = player.speed * (isSprinting ? 4.0f : 1.5f);
+
             Vector2 movement_vector = inputActions.Player.Move.ReadValue<Vector2>();
-            movement_vector = movement_vector.normalized * player.speed * 1.5f;
+            movement_vector = movement_vector.normalized * speed;
             
             player.GetComponent<Rigidbody2D>().linearVelocity = movement_vector;
         }
