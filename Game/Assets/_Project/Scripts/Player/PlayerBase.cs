@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBase : CharacterBase
 {
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,6 +13,6 @@ public class PlayerBase : CharacterBase
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

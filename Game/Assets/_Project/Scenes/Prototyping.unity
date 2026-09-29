@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterManager
   characterName: character_1
-  characterPrefab: {fileID: 1114066909068210568, guid: 0d9c5712b39840e4688586126c8fc30b, type: 3}
+  characterPrefab: {fileID: 5281448372367261310, guid: 30ef0f86d0cd51d419a10581a29249fc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
