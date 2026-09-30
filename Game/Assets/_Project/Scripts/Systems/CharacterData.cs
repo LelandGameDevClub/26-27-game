@@ -5,4 +5,5 @@ using System.Collections.Generic;
 public class CharacterData
 {
     public List<int> stats;
+    public float speed;
 }

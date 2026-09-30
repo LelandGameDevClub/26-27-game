@@ -1,10 +1,8 @@
 using UnityEngine;
-using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
-public class CharacterBase : MonoBehaviour
+public class PlayerBase : CharacterBase
 {
-    public List<int> stats = new() {0, 0, 0, 0};
-    public float speed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +13,6 @@ public class CharacterBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
